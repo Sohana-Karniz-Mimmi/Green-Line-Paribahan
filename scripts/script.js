@@ -4,3 +4,4 @@ const buyTicketsBtn = document.getElementById('buy-tickets').addEventListener('c
 })
 
 
+// Select Your Seat
