@@ -92,9 +92,8 @@ let selectedCount = 0;
                     applyInputId.setAttribute('disabled', true);
                     applyBtnId.setAttribute('disabled', true);
                 }
-
                 //For 20% Discount
-                if(couponCode === 'Couple 20'){
+                else if(couponCode === 'Couple 20'){
                     const discountPrice = document.getElementById('discountPrice');
                     const totalPriced = document.getElementById('total-price').innerText
                      const convertedTotalPriced = parseInt(totalPriced);
@@ -116,6 +115,9 @@ let selectedCount = 0;
                     applyInputId.setAttribute('disabled', true);
                     applyBtnId.setAttribute('disabled', true);
                 }
+                else{
+                    alert('Please Enter Right Coupon Code')
+                }
             })
         }
 
@@ -135,7 +137,7 @@ let selectedCount = 0;
             input.addEventListener('keyup', function(even){
 
             if(isNaN(input.value)){
-                console.log('Invalid')
+                return;
             }
             else{
                 // Next Button
@@ -151,7 +153,7 @@ let selectedCount = 0;
             selectedCount++;
            }
            else{
-            console.log("Please select ")
+            alert("You Already Selected 4 Seat");
            }
 
    })
