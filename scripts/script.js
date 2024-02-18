@@ -56,5 +56,20 @@ let count = 0;
             const grandTotal = document.getElementById('grand-total')
             grandTotal.innerText = convertedGrandTotal + 550;
             
+
+
+            // Passenger Information
+            const inputField = document.getElementsByClassName('passenger-info')
+            const input = inputField[1]
+                input.addEventListener('keyup', function(even){
+
+                // Next Button
+                document.getElementById('next-btn').addEventListener('click', function(){
+                    const myModel = document.getElementById('my_modal_5')
+                    myModel.showModal()
+                })
+            });
+
        })
     }
+    
