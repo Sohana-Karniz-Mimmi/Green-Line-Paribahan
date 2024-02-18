@@ -71,12 +71,21 @@ let selectedCount = 0;
 
                 //For 15% Discount
                 if(couponCode === 'NEW15'){
-                    const discountPrice = document.getElementById('discountPrice');
+
+                    // create 2 p tag for discount append
+                    const discountAdd = document.getElementById('discount-add');
+                    const p4 = document.createElement('p');
+                    p4.classList.add('font-raleway', 'font-semibold', 'text-lg', 'text-[#030712]')
+                    p4.innerText = 'Discount';
+                    discountAdd.appendChild(p4);
+                    const p5 = document.createElement('p');
+                    p5.classList.add('font-raleway', 'font-semibold', 'text-lg', 'text-[#030712]')
+                    
                     const totalPriced = document.getElementById('total-price').innerText
                      const convertedTotalPriced = parseInt(totalPriced);
                     const discount = 0.15 * convertedTotalPriced;
-                    discountPrice.innerText = discount
-
+                    p5.innerText = discount;
+                    discountAdd.appendChild(p5);
 
                     // Grand Total Calculation
                     const grandTotalTextValue = document.getElementById('grand-total').innerText
@@ -94,11 +103,22 @@ let selectedCount = 0;
                 }
                 //For 20% Discount
                 else if(couponCode === 'Couple 20'){
-                    const discountPrice = document.getElementById('discountPrice');
+
+                    // create 2 p tag for discount append
+                    const discountAdd = document.getElementById('discount-add');
+                    const p4 = document.createElement('p');
+                    p4.classList.add('font-raleway', 'font-semibold', 'text-lg', 'text-[#030712]')
+                    p4.innerText = 'Discount';
+                    discountAdd.appendChild(p4);
+                    const p5 = document.createElement('p');
+                    p5.classList.add('font-raleway', 'font-semibold', 'text-lg', 'text-[#030712]')
+
+
                     const totalPriced = document.getElementById('total-price').innerText
                      const convertedTotalPriced = parseInt(totalPriced);
                     const discount = 0.2 * convertedTotalPriced;
-                    discountPrice.innerText = discount
+                    p5.innerText = discount;
+                    discountAdd.appendChild(p5);
 
 
                     // Grand Total Calculation
