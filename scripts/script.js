@@ -42,6 +42,19 @@ let count = 0;
              p3.classList.add('font-inter', 'font-semibold', 'text-[16px]', 'text-[#03071299]')
              p3.innerText = 550;
             div.appendChild(p3)
+
+
+            // Total Price Calculation
+            const totalPriceText = document.getElementById('total-price').innerText
+            const convertedTotalPrice = parseInt(totalPriceText);
+            const totalPrice = document.getElementById('total-price')
+            totalPrice.innerText = convertedTotalPrice + 550;
+
+            // Grand Total Calculation
+            const grandTotalText = document.getElementById('grand-total').innerText
+            const convertedGrandTotal = parseInt(grandTotalText);
+            const grandTotal = document.getElementById('grand-total')
+            grandTotal.innerText = convertedGrandTotal + 550;
             
        })
     }
