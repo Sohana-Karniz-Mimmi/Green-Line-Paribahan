@@ -61,13 +61,23 @@ let count = 0;
             // Passenger Information
             const inputField = document.getElementsByClassName('passenger-info')
             const input = inputField[1]
+            const inputName =inputField[0]
+            const inputEmail =inputField[2]
                 input.addEventListener('keyup', function(even){
 
-                // Next Button
-                document.getElementById('next-btn').addEventListener('click', function(){
+                if(isNaN(input.value)){
+                    console.log('Invalid')
+                }
+                else(
+                    // Next Button
+                document.getElementById('next-btn').addEventListener('click', function(event){
                     const myModel = document.getElementById('my_modal_5')
                     myModel.showModal()
+                    input.value = ""
+                    inputName.value = ""
+                    inputEmail.value = ""
                 })
+                )
             });
 
        })
