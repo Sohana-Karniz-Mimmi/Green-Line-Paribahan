@@ -57,6 +57,68 @@ let selectedCount = 0;
         const totalPrice = document.getElementById('total-price')
         totalPrice.innerText = convertedTotalPrice + 550;
 
+        // Apply Button
+        if(selectedCount == 3){
+            const applyInput = document.getElementById('apply-input');
+            const applyBtn = document.getElementById('apply-btn')
+             applyInput.removeAttribute('disabled');
+             applyBtn.removeAttribute('disabled');
+
+            //  Discount Calculation
+            document.getElementById('apply-btn').addEventListener('click', function () {
+                const inputField = document.getElementById('apply-input').value;
+                const couponCode = inputField.split(' ').join(' ').trim();
+
+                //For 15% Discount
+                if(couponCode === 'NEW15'){
+                    const discountPrice = document.getElementById('discountPrice');
+                    const totalPriced = document.getElementById('total-price').innerText
+                     const convertedTotalPriced = parseInt(totalPriced);
+                    const discount = 0.15 * convertedTotalPriced;
+                    discountPrice.innerText = discount
+
+
+                    // Grand Total Calculation
+                    const grandTotalTextValue = document.getElementById('grand-total').innerText
+                    const convertedGrandTotalValue = parseInt(grandTotalTextValue);
+                    const discountCalculate = convertedGrandTotalValue - discount
+                    const totalGrandPrice = document.getElementById('grand-total')
+                    totalGrandPrice.innerText = discountCalculate
+
+                    const inputFieldEmpty = document.getElementById('apply-input')
+                    const applyInputId = document.getElementById('apply-input');
+                    const applyBtnId = document.getElementById('apply-btn')
+                    inputFieldEmpty.value = ''
+                    applyInputId.setAttribute('disabled', true);
+                    applyBtnId.setAttribute('disabled', true);
+                }
+
+                //For 20% Discount
+                if(couponCode === 'Couple 20'){
+                    const discountPrice = document.getElementById('discountPrice');
+                    const totalPriced = document.getElementById('total-price').innerText
+                     const convertedTotalPriced = parseInt(totalPriced);
+                    const discount = 0.2 * convertedTotalPriced;
+                    discountPrice.innerText = discount
+
+
+                    // Grand Total Calculation
+                    const grandTotalTextValue = document.getElementById('grand-total').innerText
+                    const convertedGrandTotalValue = parseInt(grandTotalTextValue);
+                    const discountCalculate = convertedGrandTotalValue - discount
+                    const totalGrandPrice = document.getElementById('grand-total')
+                    totalGrandPrice.innerText = discountCalculate
+
+                    const inputFieldEmpty = document.getElementById('apply-input')
+                    const applyInputId = document.getElementById('apply-input');
+                    const applyBtnId = document.getElementById('apply-btn')
+                    inputFieldEmpty.value = ''
+                    applyInputId.setAttribute('disabled', true);
+                    applyBtnId.setAttribute('disabled', true);
+                }
+            })
+        }
+
         // Grand Total Calculation
         const grandTotalText = document.getElementById('grand-total').innerText
         const convertedGrandTotal = parseInt(grandTotalText);
