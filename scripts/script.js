@@ -173,7 +173,7 @@ let selectedCount = 0;
             selectedCount++;
            }
            else{
-            alert("You Already Selected 4 Seat");
+            alert("You Already Select 4 Seats");
            }
 
    })
