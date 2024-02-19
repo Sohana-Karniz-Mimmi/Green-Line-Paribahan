@@ -84,7 +84,7 @@ let selectedCount = 0;
                     const totalPriced = document.getElementById('total-price').innerText
                      const convertedTotalPriced = parseInt(totalPriced);
                     const discount = 0.15 * convertedTotalPriced;
-                    p5.innerText = discount;
+                    p5.innerText ='BDT' + discount;
                     discountAdd.appendChild(p5);
 
                     // Grand Total Calculation
