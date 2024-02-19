@@ -75,11 +75,11 @@ let selectedCount = 0;
                     // create 2 p tag for discount append
                     const discountAdd = document.getElementById('discount-add');
                     const p4 = document.createElement('p');
-                    p4.classList.add('font-raleway', 'font-semibold', 'text-lg', 'text-[#030712]')
-                    p4.innerText = 'Discount';
+                    p4.classList.add('font-inter', 'font-semibold', 'text-lg', 'text-[#030712]')
+                    p4.innerText = 'Discount Price';
                     discountAdd.appendChild(p4);
                     const p5 = document.createElement('p');
-                    p5.classList.add('font-raleway', 'font-semibold', 'text-lg', 'text-[#030712]')
+                    p5.classList.add('font-inter', 'font-semibold', 'text-lg', 'text-[#030712]')
                     
                     const totalPriced = document.getElementById('total-price').innerText
                      const convertedTotalPriced = parseInt(totalPriced);
@@ -107,11 +107,11 @@ let selectedCount = 0;
                     // create 2 p tag for discount append
                     const discountAdd = document.getElementById('discount-add');
                     const p4 = document.createElement('p');
-                    p4.classList.add('font-raleway', 'font-semibold', 'text-lg', 'text-[#030712]')
-                    p4.innerText = 'Discount';
+                    p4.classList.add('font-inter', 'font-semibold', 'text-lg', 'text-[#030712]')
+                    p4.innerText = 'Discount Price';
                     discountAdd.appendChild(p4);
                     const p5 = document.createElement('p');
-                    p5.classList.add('font-raleway', 'font-semibold', 'text-lg', 'text-[#030712]')
+                    p5.classList.add('font-inter', 'font-semibold', 'text-lg', 'text-[#030712]')
 
 
                     const totalPriced = document.getElementById('total-price').innerText
